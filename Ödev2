@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class a {
+
+    public static void main(String[] args) {
+        int para;
+        double kdv_para;
+        double kdv;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("ücreti gir:");
+        para=input.nextInt();
+
+        System.out.println("KDV'siz fiyat:" + para);
+        kdv_para = para * 1.18;
+        System.out.println("KDV'li fiyat:" + kdv_para);
+        kdv = kdv_para - para;
+        System.out.println("KDV tutarı:" + kdv);
+    }
+}
