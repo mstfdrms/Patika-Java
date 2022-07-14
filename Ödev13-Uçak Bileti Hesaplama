@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class a {
+
+    public static void main(String[] args) {
+
+        int age;
+        int km;
+        int tip;
+        double kat=0.10;
+        double price;
+        double indy;
+        double indz;
+
+        Scanner inpt = new Scanner(System.in);
+
+        System.out.println("Yaş:");
+        age = inpt.nextInt();
+        if (age>0) {
+
+            if (age<12){
+                indy=0.5;
+            }else if (age>=12 && age<24){
+                indy=0.9;
+            }else if (age>65){
+                indy=0.7;
+            }else{
+                indy=1.0;
+            }
+
+            System.out.println("Yol:");
+            km = inpt.nextInt();
+
+            if (km > 0) {
+
+                System.out.println("Tip:\n 1:Tek Yön or 2:Gidiş-Geliş ");
+                tip = inpt.nextInt();
+
+                switch (tip) {
+                    case 1:
+                        indz=1.0;
+                        price = (km * kat*indy*indz);
+                        System.out.println("Toplam Fiyat:" + price);
+                        break;
+                    case 2:
+                        indz=0.8;
+                        price = (km * kat * 2*indy*indz);
+                        System.out.println("Toplam Fiyat:" + price);
+                        break;
+                    default:
+                        System.out.println("Hatalı veri girdiniz!");
+                }
+            } else {
+                System.out.println("Hatalı veri girdiniz!");
+            }
+        }else {
+            System.out.println("Hatalı veri girdiniz!");
+        }
+    }
+    }
+
+
