@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class a {
+    public static void main(String[] args) {
+
+        int n1,n2,op;
+        int son;
+
+        Scanner imp = new Scanner(System.in);
+        System.out.println("sayı1 :");
+        n1=imp.nextInt();
+        System.out.println("sayı2 :");
+        n2=imp.nextInt();
+
+        System.out.println("1:Toplam\n2:Çıkarma\n3:Çarpma\n4:Bölme");
+        System.out.println("seçiniz:");
+        op=imp.nextInt();
+
+        switch(op){
+            case 1:
+                son=n1+n2;
+                System.out.println(son);
+                break;
+            case 2:
+                son=n1-n2;
+                System.out.println(son);
+                break;
+            case 3:
+                son=n1*n2;
+                System.out.println(son);
+                break;
+            case 4:
+                son=n1/n2;
+                System.out.println(son);
+                break;
+        }
+    }
+}
