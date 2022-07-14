@@ -4,7 +4,7 @@ public class a {
         int yol;
         double para;
         double km=2.20;
-        int sabit=20;
+        int sabit=10;
         Scanner imp = new Scanner(System.in);
         System.out.println("km bilgisini gir:");
         yol=imp.nextInt();
