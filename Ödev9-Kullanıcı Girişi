@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class a {
+    public static void main(String[] args) {
+
+        String username,password,cevap,newpass;
+        String user="mustafa";
+        String pass="must123";
+
+        
+        Scanner imp = new Scanner(System.in);
+        System.out.println("Kullanıcı adı :");
+        username=imp.nextLine();
+        System.out.println("Şifre :");
+        password=imp.nextLine();
+
+        if(username.equals(user) && password.equals(pass)){
+            System.out.println("Giriş Yaptınız");
+        }else if (username!=user && password.equals(pass)){
+            System.out.println("Kullanıcı adı yanlış");
+        }else{
+            System.out.println("Şifreyi sıfırlamak ister misiniz?\nyes or no");
+            cevap=imp.nextLine();
+            switch (cevap){
+                case "yes":
+                    System.out.println("Yeni şifreyi giriniz:");
+                    newpass= imp.nextLine();
+                    if (newpass.equals(pass)){
+                        System.out.println("Şifre oluşturulamadı, lütfen başka şifre giriniz.");
+                        break ;
+                    }else{
+                        pass=newpass;
+                        System.out.println("Şifre oluşturuldu");
+                        break;
+                    }
+                case "no":
+                    System.out.println("Şifre değiştirlmedi");
+                    break;
+                default:
+                    System.out.println("çıkış yapılıyor");
+            }
+        }
+    }
+}
