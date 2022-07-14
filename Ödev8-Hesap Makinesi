@@ -3,7 +3,7 @@ public class a {
     public static void main(String[] args) {
 
         int n1,n2,op;
-        int son;
+        double son;
 
         Scanner imp = new Scanner(System.in);
         System.out.println("sayı1 :");
@@ -29,9 +29,16 @@ public class a {
                 System.out.println(son);
                 break;
             case 4:
-                son=n1/n2;
-                System.out.println(son);
-                break;
+                if (n2!=0) {
+                    son = n1 / n2;
+                    System.out.println(son);
+                    break;
+                }else {
+                    System.out.println("Bir sayı sıfıra bölünemez");
+                    break;
+                }
+            default:
+                System.out.println("Yanlış operatör seçimi");
         }
     }
 }
