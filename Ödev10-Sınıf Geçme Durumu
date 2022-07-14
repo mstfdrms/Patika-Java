@@ -1,0 +1,51 @@
+import java.util.Scanner;
+public class a {
+    public static void main(String[] args) {
+
+        int mat, fiz, turk, kim, muz;
+        double ort = 0.0;
+        int say=0;
+
+        Scanner imp = new Scanner(System.in);
+
+        System.out.println("Matematik notu :");
+        mat = imp.nextInt();
+        if (mat >= 0 && mat <= 100) {
+            ort += mat;
+            say++;
+        }
+        System.out.println("Fizik notu :");
+        fiz = imp.nextInt();
+        if (fiz >= 0 && fiz <= 100) {
+            ort += fiz;
+            say++;
+        }
+        System.out.println("Turkçe notu :");
+        turk = imp.nextInt();
+        if (turk >= 0 && turk <= 100) {
+            ort += turk;
+            say++;
+        }
+        System.out.println("Kimya notu :");
+        kim = imp.nextInt();
+        if (kim >= 0 && kim <= 100) {
+            ort += kim;
+            say++;
+        }
+        System.out.println("Müzik notu :");
+        muz = imp.nextInt();
+        if (muz >= 0 && muz <= 100) {
+            ort += muz;
+            say++;
+        }
+        ort=ort/say;
+
+        if (ort>=55) {
+            System.out.println("Ortalama Notunuz:" + ort + " Geçtiniz");
+        }else{
+            System.out.println("Ortalama Notunuz:" + ort + " Kaldınız");
+        }
+
+
+    }
+}
